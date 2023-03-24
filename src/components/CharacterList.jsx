@@ -35,7 +35,7 @@ const CharacterList = () => {
         : error 
           ? <Error /> 
           : (
-            characters.map(item => <Character />)
+            characters.map(item => <Character key={item.id} data={item} />)
           )
       }
     </div>
