@@ -31,8 +31,15 @@ const Character = (props) => {
     setFavorite(false)
   }
 
-  useEffect(() => {
+  const isFavorite = () => {
+    const result = favoriteCharacters.filter(item => item.data.id === id)
+    if (result.length) {
+      setFavorite(true)
+    }
+  }
 
+  useEffect(() => {
+    isFavorite()
   }, [])
 
   return (
