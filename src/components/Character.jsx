@@ -54,6 +54,11 @@ const Character = (props) => {
           className='character__details__item-more'>More details...
         </p>
       </div>
+
+      <Modal isOpen={modal} onClose={handleCloseModal}>
+        <CharacterDetail data={data} />
+      </Modal>
+
     </div>
   )
 }
