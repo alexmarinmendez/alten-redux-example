@@ -8,8 +8,8 @@ const Header = () => {
   const sectionActive = useSelector(state => state.sectionActive)
   const dispatch = useDispatch()
 
-  const handleSetSection = () => {
-    
+  const handleSetSection = section => {
+    dispatch(setSection(section))
   }
 
   return (
