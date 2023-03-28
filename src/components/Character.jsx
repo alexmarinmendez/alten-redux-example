@@ -10,7 +10,7 @@ const Character = (props) => {
   const [modal, setModal] = useState(false)
   const [favorite, setFavorite]  = useState(false)
 
-  const { data } = props
+  const { data, favoriteCharacters } = props
   const { id, image, name, status, gender, species } = data
   
   const handleCloseModal = () => {
@@ -69,4 +69,17 @@ const Character = (props) => {
   )
 }
 
-export default Character
+// react-redux native with HOC
+const mapStateToProps = state => {
+  return {
+    favoriteCharacters: state.favoriteCharacters,
+    // sectionActive: state.sectionActive,
+  }
+}
+
+const mapDispatchToProps = {
+  setFavorite,
+  deleteFavorite
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Character)
