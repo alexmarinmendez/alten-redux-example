@@ -13,8 +13,14 @@ const Character = (props) => {
   const { data } = props
   const { id, image, name, status, gender, species } = data
   
-  const handleCloseModal = () => {}
-  const handleOpenModal = () => {}
+  const handleCloseModal = () => {
+    setModal(false)
+  }
+
+  const handleOpenModal = () => {
+    setModal(true)
+  }
+  
   const handleSetFavorite = () => {}
   const handleDeleteFavorite = () => {}
 
