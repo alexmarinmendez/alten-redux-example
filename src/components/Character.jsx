@@ -40,6 +40,19 @@ const Character = (props) => {
               className="character__details-star nofavorite"
           />
         }
+        <p className='character_details__item'>
+          <span className='character__details__item-type'>Status: </span>{status}
+        </p>
+        <p className='character_details__item'>
+          <span className='character__details__item-type'>Species: </span>{species}
+        </p>
+        <p className='character_details__item'>
+          <span className='character__details__item-type'>Gender: </span>{gender}
+        </p>
+        <p 
+          onClick={handleOpenModal}
+          className='character__details__item-more'>More details...
+        </p>
       </div>
     </div>
   )
