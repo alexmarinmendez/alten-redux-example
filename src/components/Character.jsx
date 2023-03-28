@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import { setFavorite, deleteFavorite } from '../actions'
 import "../assets/styles/components/Character.scss"
+import { ReactComponent as SVGStar } from "../assets/static/icons/star.svg"
 import CharacterDetail from './CharacterDetail'
 import Modal from './Modal'
 
@@ -24,6 +25,22 @@ const Character = (props) => {
   return (
     <div className='character'>
       <img className='character__img' src={image} alt="" />
+      <div className='character__details'>
+        <h2 className='character__details-name'>
+          {name}
+        </h2>
+        {
+          favorite 
+          ? <SVGStar
+              onClick={() => handleDeleteFavorite(id)}
+              className="character__details-star favorite"
+            /> 
+          : <SVGStar 
+              onClick={() => handleSetFavorite(id)}
+              className="character__details-star nofavorite"
+          />
+        }
+      </div>
     </div>
   )
 }
