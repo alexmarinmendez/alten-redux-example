@@ -21,8 +21,15 @@ const Character = (props) => {
     setModal(true)
   }
   
-  const handleSetFavorite = () => {}
-  const handleDeleteFavorite = () => {}
+  const handleSetFavorite = () => {
+    props.setFavorite({ data })
+    setFavorite(true)
+  }
+
+  const handleDeleteFavorite = (itemId) => {
+    props.deleteFavorite(itemId)
+    setFavorite(false)
+  }
 
   useEffect(() => {
 
