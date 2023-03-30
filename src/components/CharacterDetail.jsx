@@ -7,6 +7,27 @@ const CharacterDetail = (props) => {
   return (
     <div className="characterDetail">
       <img src={image} alt="" />
+      <div className="characterDetail__container">
+        <h2>{name}</h2>
+        <p className="characterDetail__item">
+          <span className="characterDetail__item-type">Status: </span>{status}
+        </p>
+        <p className="characterDetail__item">
+          <span className="characterDetail__item-type">Species: </span>{species}
+        </p>
+        <p className="characterDetail__item">
+          <span className="characterDetail__item-type">Gender: </span>{gender}
+        </p>
+        <p className="characterDetail__item">
+          <span className="characterDetail__item-type">Origin: </span>{origin.name}
+        </p>
+        <p className="characterDetail__item">
+          <span className="characterDetail__item-type">Last location: </span>{location.name}
+        </p>
+        <p className="characterDetail__item">
+          <span className="characterDetail__item-type">Episodes: </span>{episode.length}
+        </p>
+      </div>
     </div>
   )
 }
