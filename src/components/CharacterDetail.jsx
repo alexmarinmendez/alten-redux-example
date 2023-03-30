@@ -1,6 +1,13 @@
-const CharacterDetail = () => {
+import "../assets/styles/components/CharacterDetail.scss"
+
+const CharacterDetail = (props) => {
+  const { data } = props
+  const { image, name, status, species, gender, origin, location, episode} = data
+
   return (
-    <div>CharacterDetail</div>
+    <div className="characterDetail">
+      <img src={image} alt="" />
+    </div>
   )
 }
 
