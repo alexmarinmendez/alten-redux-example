@@ -57,7 +57,7 @@ const Character = (props) => {
             /> 
           : <SVGStar 
               onClick={() => handleSetFavorite(id)}
-              className="character__details-star nofavorite"
+              className="character__details-star noFavorite"
           />
         }
         <p className='character_details__item'>
