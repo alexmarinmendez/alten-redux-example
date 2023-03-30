@@ -9,7 +9,9 @@ const Modal = (props) => {
       <figure onClick={props.onClose} className="modal__close">
         <SVGClose className="modal__close-icon" />
       </figure>
-    </div>
+      <div>{ props.children }</div>
+    </div>,
+    document.getElementById("modal")
   )
   : null
 }
